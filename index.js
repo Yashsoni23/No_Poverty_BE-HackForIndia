@@ -23,7 +23,7 @@ app.use("/client", clientController);
 app.use("/worker", workerController);
 app.use("/coworker", coWorkerController);
 app.use("/category", workerCategory);
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`Server is running on Port ${process.env.PORT}`);
   connect_DB();
 });
